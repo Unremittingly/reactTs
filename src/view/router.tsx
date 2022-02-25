@@ -1,12 +1,17 @@
-export const routerArr =[
+import React from 'react';
+import B from "./b";
+import A from "./a";
+const  routerArr = [
     {
         name :'A',
-        com: '/a'
+        com: '/a',
+        ccc: <B/>
     },
     {
         name: 'B',
-        com: '/b'
+        com: '/b',
+        ccc: <A/>
     }
 ];
-
+export default routerArr
 
