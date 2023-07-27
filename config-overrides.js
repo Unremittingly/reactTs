@@ -30,6 +30,7 @@ const devServerConfig = () => (config) => {
   };
 };
 
+//需要 按照babel-plugin-import node包
 module.exports = {
   webpack: override(
       (config) => ({
@@ -38,7 +39,8 @@ module.exports = {
       }),
       fixBabelImports('import', {
         libraryName: 'antd',
-        style: 'css',
+        libraryDirectory: 'es',
+        style: true, //使用less+less-loader
       }),
       addWebpackAlias({
         '@': path.resolve(__dirname, './src'),

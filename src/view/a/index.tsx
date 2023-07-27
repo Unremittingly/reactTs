@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
 import {Button, Form, Input} from "antd";
+import './style.less';
 
 const FormCompo =(props:any)=>{
     const {formArr,setFormArr} = props;
@@ -29,7 +30,7 @@ const A =()=>{
         console.log('arr',arr);
     }
     console.log('formArr',formArr,arra);
-    return <div>
+    return <div className="form-i">
         {
             [1,2,3].map((item,index)=>{
                 return <FormCompo key={index} formArr={formArr} arr={arra} setFormArr={setFormArr}/>
