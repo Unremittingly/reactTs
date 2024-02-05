@@ -1,17 +1,18 @@
 import React from 'react';
 import './App.css';
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
-import routerArr from "./view/router";
+import {BrowserRouter} from 'react-router-dom';
+import {Router} from "./view/router";
+import {BackHome} from "./view";
 
-
-const router = createBrowserRouter(routerArr)
 
 function App() {
 
-
   return (
       <div className="app">
-        <RouterProvider  router={router}/>
+        <BrowserRouter>
+          <BackHome/>
+          <Router/>
+        </BrowserRouter>
       </div>
   );
 }

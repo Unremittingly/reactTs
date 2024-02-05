@@ -2,7 +2,8 @@ import React from 'react';
 import B from "./b";
 import A from "./a";
 import Home from "./home";
-const  routerArr = [
+import {useRoutes} from 'react-router-dom';
+export const  routerArr = [
     {
         path: "/",
         element: <Home/>,
@@ -19,5 +20,5 @@ const  routerArr = [
         children: [],
     }
 ];
-export default routerArr
+export const Router = ()=> useRoutes(routerArr);
 
